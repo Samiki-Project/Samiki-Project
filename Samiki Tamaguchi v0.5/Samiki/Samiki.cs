@@ -19,17 +19,17 @@ namespace Samiki_Tamaguchi
         public string Name { get; set; } = "Samiki Kobayashi";
         /// <summary>
         /// Samiki's Hapiness
-        /// <para> By default it is 100, but can be random or set when creating Samiki</para>
+        /// <para> By default it is 100, but can be random when creating Samiki</para>
         /// </summary>
         public static int Hapiness { get; set; } = 100;
         /// <summary>
         /// Samiki's Hunger
-        /// <para> By default it is 100, but can be random or set when creating Samiki</para>
+        /// <para> By default it is 100, but can be random when creating Samiki</para>
         /// </summary>
         public static int Hunger { get; set; } = 100;
         /// <summary>
         /// Samiki's Health
-        /// <para> By default it is 100, but can be random or set when creating Samiki</para>
+        /// <para> By default it is 100, but can be random when creating Samiki</para>
         /// </summary>
         public int Health { get; set; } = 100;
         /// <summary>
