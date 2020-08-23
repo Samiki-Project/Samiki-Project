@@ -62,4 +62,24 @@ namespace Samiki_Tamaguchi.Extensions
             new NotImplementedException("Not yet implemented, under construction");
         }
     }
+
+    public class MultiTimeOut
+    {
+        public static void Start(int time, params Action[] actions)
+        {
+            new Thread(() =>
+            {
+                Thread.Sleep(time);
+                for (int i = 0; i < actions.Length; i++)
+                {
+                    Action action = actions[i];
+                    action();
+                }
+            }).Start();
+        }
+        public static void Stop()
+        {
+            new NotImplementedException("Not yet implemented, under construction");
+        }
+    }
 }
