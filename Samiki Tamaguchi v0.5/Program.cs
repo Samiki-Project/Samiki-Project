@@ -1,6 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Timers;
+using Samiki_Tamaguchi.Events;
 
 namespace Samiki_Tamaguchi
 {
@@ -13,37 +12,45 @@ namespace Samiki_Tamaguchi
         /// By default it is "Akira Mizushima", but can be customized.
         /// </summary>
         public static string YourName { get; set; } = "Akira Mizushima";
+        /// <summary>
+        /// A static field with the name of Samiki to be able to obtain this reference in other files
+        /// </summary>
+        public static string SamikiName { get; set; }
+
+
+
         static void Main(string[] args)
         {
-            GameStarted();
-        }
-        /* static void Main(string[] args)
-         {
-             Console.WriteLine($"HI! My name is Mya-nee and I will assist you today!");
-             Console.WriteLine("Welcome to Samiki Tamaguchi v0.5 \nIt's a pleasure to have you with us!");
-             Console.WriteLine("Do you want to start?");
-             Console.WriteLine($"Y- Yes");
-             Console.WriteLine($"N- No");
-             ConsoleKeyInfo option = Console.ReadKey(true);
+            Console.WriteLine($"HI! My name is Mya-nee and I will assist you today!");
+            Console.WriteLine("Welcome to Samiki Tamaguchi v0.5 \nIt's a pleasure to have you with us!");
+            Console.WriteLine("Do you want to start?");
+            Console.WriteLine($"Y- Yes");
+            Console.WriteLine($"N- No");
+            ConsoleKeyInfo option = Console.ReadKey(true);
 
-             switch (option.KeyChar)
-             {
-                 case 'Y':
-                 case 'y':
-                     StartGame();
-                     break;
-                 case 'N':
-                 case 'n':
-                     Console.WriteLine("Ok, see you soon!");
-                     break;
-                 default:
-                     throw new ArgumentException("Error: You must enter a valid answer!");
-             }
-         }
-        */
+            switch (option.KeyChar)
+            {
+                case 'Y':
+                case 'y':
+                    StartGame();
+                    break;
+                case 'N':
+                case 'n':
+                    Console.WriteLine("Ok, see you soon!");
+                    break;
+                default:
+                    throw new ArgumentException("Error: You must enter a valid answer!");
+            }
+        }
+
+        /// <summary>
+        /// Starts the game With the User preferences!
+        /// <para></para>
+        /// Generates an execution of the method <see cref="GameStarted(string, bool, bool)"/>
+        /// </summary>
         public static void StartGame()
         {
-            Console.WriteLine($"Be Welcomeee... ehh...");
+            Console.WriteLine($"\nBe Welcomeee... ehh...");
             Console.WriteLine($"What's your name?");
             Console.WriteLine($"1- Use default name");
             Console.WriteLine($"Or enter your name:");
@@ -51,7 +58,7 @@ namespace Samiki_Tamaguchi
 
             if (option.Length > 1) { YourName = option; }
 
-            Console.WriteLine($"Right! Hello {YourName}!!");
+            Console.WriteLine($"\nRight! Hello {YourName}!!");
             Console.WriteLine($"Be Welcome!");
             Console.WriteLine($"Do you want your dear Samiki to have the default name?");
             Console.WriteLine($"1- Use default name");
@@ -60,7 +67,7 @@ namespace Samiki_Tamaguchi
 
             if (option.Length > 1)
             {
-                Console.WriteLine($"Oooahh! What an amazing name!");
+                Console.WriteLine($"\nOooahh! What an amazing name!");
                 Console.WriteLine($"One more thing: do you want her to be bipolar?");
                 Console.WriteLine($"Y- Yes");
                 Console.WriteLine($"N- No");
@@ -70,7 +77,7 @@ namespace Samiki_Tamaguchi
                 {
                     case 'Y':
                     case 'y':
-                        Console.WriteLine($"Ehh... Ok... Good Luck!");
+                        Console.WriteLine($"\nEhh... Ok... Good Luck!");
                         Console.WriteLine($"One more thing, I promise it's the last! >.<");
                         Console.WriteLine($"Do you want her to be born with random happiness / hunger numbers?");
                         Console.WriteLine($"Y- Yes");
@@ -80,19 +87,11 @@ namespace Samiki_Tamaguchi
                         {
                             case 'Y':
                             case 'y':
-                                Samiki Samiki_chan = new Samiki(true)
-                                {
-                                    Name = nameoption,
-                                    Bipolar = true
-                                };
+                                GameStarted(nameoption, true, true);
                                 break;
                             case 'N':
                             case 'n':
-                                Samiki Samiki_chan2 = new Samiki()
-                                {
-                                    Name = nameoption,
-                                    Bipolar = true
-                                };
+                                GameStarted(nameoption, true);
                                 break;
                             default:
                                 throw new ArgumentException("Error: You must enter a valid answer!");
@@ -101,7 +100,7 @@ namespace Samiki_Tamaguchi
                         break;
                     case 'N':
                     case 'n':
-                        Console.WriteLine($"I agree with you, bipolar people are complicated!");
+                        Console.WriteLine($"\nI agree with you, bipolar people are complicated!");
                         Console.WriteLine($"One more thing, I promise it's the last! >.<");
                         Console.WriteLine($"Do you want her to be born with random happiness / hunger numbers?");
                         Console.WriteLine($"Y- Yes");
@@ -111,17 +110,11 @@ namespace Samiki_Tamaguchi
                         {
                             case 'Y':
                             case 'y':
-                                Samiki Samiki_chan = new Samiki(true)
-                                {
-                                    Name = nameoption
-                                };
+                                GameStarted(nameoption, false, true);
                                 break;
                             case 'N':
                             case 'n':
-                                Samiki Samiki_chan2 = new Samiki()
-                                {
-                                    Name = nameoption
-                                };
+                                GameStarted(nameoption);
                                 break;
                             default:
                                 throw new ArgumentException("Error: You must enter a valid answer!");
@@ -133,7 +126,7 @@ namespace Samiki_Tamaguchi
             }
             else
             {
-                Console.WriteLine($"Okay! She will have the default name!");
+                Console.WriteLine($"\nOkay! She will have the default name!");
                 Console.WriteLine($"One more thing: do you want her to be bipolar?");
                 Console.WriteLine($"Y- Yes");
                 Console.WriteLine($"N- No");
@@ -143,7 +136,7 @@ namespace Samiki_Tamaguchi
                 {
                     case 'Y':
                     case 'y':
-                        Console.WriteLine($"Ehh... Ok... Good Luck!");
+                        Console.WriteLine($"\nEhh... Ok... Good Luck!");
                         Console.WriteLine($"One more thing, I promise it's the last! >.<");
                         Console.WriteLine($"Do you want her to be born with random happiness / hunger numbers?");
                         Console.WriteLine($"Y- Yes");
@@ -153,17 +146,11 @@ namespace Samiki_Tamaguchi
                         {
                             case 'Y':
                             case 'y':
-                                Samiki Samiki_chan = new Samiki(true)
-                                {
-                                    Bipolar = true
-                                };
+                                GameStarted(default, true, true);
                                 break;
                             case 'N':
                             case 'n':
-                                Samiki Samiki_chan2 = new Samiki()
-                                {
-                                    Bipolar = true
-                                };
+                                GameStarted(default, true);
                                 break;
                             default:
                                 throw new ArgumentException("Error: You must enter a valid answer!");
@@ -172,7 +159,7 @@ namespace Samiki_Tamaguchi
                         break;
                     case 'N':
                     case 'n':
-                        Console.WriteLine($"I agree with you, bipolar people are complicated!");
+                        Console.WriteLine($"\nI agree with you, bipolar people are complicated!");
                         Console.WriteLine($"One more thing, I promise it's the last! >.<");
                         Console.WriteLine($"Do you want her to be born with random happiness / hunger numbers?");
                         Console.WriteLine($"Y- Yes");
@@ -182,11 +169,11 @@ namespace Samiki_Tamaguchi
                         {
                             case 'Y':
                             case 'y':
-                                Samiki Samiki_chan = new Samiki(true);
+                                GameStarted(default, false, true);
                                 break;
                             case 'N':
                             case 'n':
-                                Samiki Samiki_chan2 = new Samiki();
+                                GameStarted();
                                 break;
                             default:
                                 throw new ArgumentException("Error: You must enter a valid answer!");
@@ -198,17 +185,153 @@ namespace Samiki_Tamaguchi
             }
         }
 
-        public static void GameStarted()
+        /// <summary>
+        /// Creates an instance for <see cref="Samiki"/> to create life and the game to start
+        /// 
+        /// </summary>
+        /// <param name="name"></param>
+        /// <param name="bipolar"></param>
+        /// <param name="random"></param>
+        public static void GameStarted(string name = default, bool bipolar = false, bool random = false)
         {
-            string any = "";
+            Samiki Samiki_chan;
+
+            if (name != default)
+            {
+                if (bipolar)
+                {
+                    if (random)
+                    {
+                        Samiki_chan = new Samiki(true)
+                        {
+                            Name = name,
+                            Bipolar = true
+                        };
+                    }
+                    else
+                    {
+                        Samiki_chan = new Samiki()
+                        {
+                            Name = name,
+                            Bipolar = true
+                        };
+                    }
+
+                }
+                else
+                {
+                    if (random)
+                    {
+                        Samiki_chan = new Samiki(true) { Name = name };
+                    }
+                    else
+                    {
+                        Samiki_chan = new Samiki() { Name = name };
+                    }
+                }
+            }
+            else
+            {
+                if (bipolar)
+                {
+                    if (random)
+                    {
+                        Samiki_chan = new Samiki(true) { Bipolar = true };
+                    }
+                    else
+                    {
+                        Samiki_chan = new Samiki() { Bipolar = true };
+                    }
+                }
+                else
+                {
+                    if (random)
+                    {
+                        Samiki_chan = new Samiki(true);
+                    }
+                    else
+                    {
+                        Samiki_chan = new Samiki();
+                    }
+                }
+            }
+
+            SamikiName = Samiki_chan.Name;
+
+            Eat eat = new Eat();
+            Play play = new Play();
+
             int i = 0;
+            string  any = "";
             while (any != "S")
             {
                 i++;
                 Console.WriteLine($"Round number {i}:");
+                if (bipolar) { Samiki_chan.StartBipolar(); Console.WriteLine($""); }
+                else { Samiki_chan.StartNormal(); Console.WriteLine($""); }
 
+                Console.WriteLine($"");
+                Console.WriteLine("What do you want to do?");
+                Console.WriteLine($"A- Eat");
+                Console.WriteLine($"B- Play");
+                Console.WriteLine($"C- Nothing");
+                Console.WriteLine($"");
                 Console.WriteLine("To Finish the Application Type 'S'");
-                any = Console.ReadLine();
+                any = Console.ReadKey(true).ToString();
+
+                switch (any)
+                {
+                    case "A":
+                    case "a":
+                        Console.WriteLine($"Does she want to eat something other than normal?");
+                        Console.WriteLine($"Y- Yes");
+                        Console.WriteLine($"N- No");
+                        char opt = char.Parse(Console.ReadKey(true).ToString());
+                        switch (opt)
+                        {
+                            case 'Y':
+                            case 'y':
+                                Console.WriteLine($"What she Want to eat?");
+                                eat.ChooseFood(Console.ReadLine());
+                                eat.Start();
+                                break;
+                            case 'N':
+                            case 'n':
+                                eat.Start();
+                                break;
+                            default:
+                                throw new ArgumentException("Error: You must enter a valid answer!");
+                        }
+                        break;
+                    case "B":
+                    case "b":
+                        Console.WriteLine($"Does she want to play something other than normal?");
+                        Console.WriteLine($"Y- Yes");
+                        Console.WriteLine($"N- No");
+                        char opt2 = char.Parse(Console.ReadKey(true).ToString());
+                        switch (opt2)
+                        {
+                            case 'Y':
+                            case 'y':
+                                Console.WriteLine($"What she Want to play?");
+                                play.ChooseGame(Console.ReadLine());
+                                play.Start();
+                                break;
+                            case 'N':
+                            case 'n':
+                                play.Start();
+                                break;
+                            default:
+                                throw new ArgumentException("Error: You must enter a valid answer!");
+                        }
+                        break;
+                    case "C":
+                    case "c":
+                        Console.WriteLine($"Okay, let's go to another Round");
+                        break;
+                    default:
+                        throw new ArgumentException("Error: You must enter a valid answer!");
+                }
             }
         }
     }
