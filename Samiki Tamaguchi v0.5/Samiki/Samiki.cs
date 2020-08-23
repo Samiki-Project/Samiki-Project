@@ -61,7 +61,7 @@ namespace Samiki_Tamaguchi
             else
             {
                 Console.WriteLine("Hapiness = {0}\nHunger = {1}\nHealth = {2}", Hapiness, Hunger, Health);
-                MultiInterval.Start(5000, true, GetAngry, GetHungry, GetLifeless);
+                MultiTimeOut.Start(5000, GetAngry, GetHungry, GetLifeless);
             }
         }
 
@@ -76,7 +76,7 @@ namespace Samiki_Tamaguchi
             if (Bipolar)
             {
                 Console.WriteLine("Hapiness = {0}\nHunger = {1}\nHealth = {2}", Hapiness, Hunger, Health);
-                Interval.Start(BipolarWorld, 3000);
+                TimeOut.Start(BipolarWorld, 3000);
             }
             else throw new Exception("Error: You cannot start a Bipolar journey if Samiki is not Bipolar!");
         }
