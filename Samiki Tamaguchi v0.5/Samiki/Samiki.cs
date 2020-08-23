@@ -4,12 +4,38 @@ using Samiki_Tamaguchi.Extensions;
 
 namespace Samiki_Tamaguchi
 {
+    /// <summary>
+    /// It represents a Samiki's life, her assets as money, and her feelings as happiness.
+    /// <para></para>
+    /// </summary>
     public partial class Samiki
     {
-        public string Name = "Samiki Kobayashi";
+
+        /// <summary>
+        /// Samiki's Name
+        /// <para></para>
+        /// By default it is "Samiki Kobayashi", but can be customized
+        /// </summary>
+        public string Name { get; set; } = "Samiki Kobayashi";
+        /// <summary>
+        /// Samiki's Hapiness
+        /// <para> By default it is 100, but can be random or set when creating Samiki</para>
+        /// </summary>
         public int Hapiness { get; set; } = 100;
+        /// <summary>
+        /// Samiki's Hunger
+        /// <para> By default it is 100, but can be random or set when creating Samiki</para>
+        /// </summary>
         public int Hunger { get; set; } = 100;
+        /// <summary>
+        /// Samiki's Health
+        /// <para> By default it is 100, but can be random or set when creating Samiki</para>
+        /// </summary>
         public int Health { get; set; } = 100;
+        /// <summary>
+        /// Samiki's Bipolarity
+        /// <para> By default it is false, but can be set to true when creating Samiki</para>
+        /// </summary>
         public bool Bipolar { get; set; } = false;
 
         /// <summary>

@@ -348,5 +348,9 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
+
+
+#Another Ignores
 /Samiki Tamaguchi v0.5.sln
 /Samiki Tamaguchi v0.5/Samiki_Tamaguchi.csproj
+/Samiki Tamaguchi v0.5/Main Character/**

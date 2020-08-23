@@ -6,7 +6,7 @@ namespace Samiki_Tamaguchi
     {
         static void Main(string[] args)
         {
-            var Samiki_chan = new Samiki(true);
+            Samiki Samiki_chan = new Samiki(true);
         }
     }
 }
