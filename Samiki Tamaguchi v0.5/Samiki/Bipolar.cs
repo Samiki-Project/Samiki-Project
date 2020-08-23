@@ -34,6 +34,19 @@ namespace Samiki_Tamaguchi
             Hunger -= value;
             Console.WriteLine("Random Value: {0}", value);
             Console.WriteLine("Hunger After: {0}", Hunger);
+
+            if (Hapiness == 0)
+            {
+                Console.WriteLine("\nHealth Before: {0}", Health);
+                min = default;
+                max = Health/2;
+                value = rnd.Next();
+                Health -= value;
+                Console.WriteLine("Random Value: {0}", value);
+                Console.WriteLine("Health After: {0}", Health);
+            }
+            else { Console.WriteLine("I'm still Happie!"); }
+
         }
 
 
