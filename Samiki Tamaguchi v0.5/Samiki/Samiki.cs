@@ -21,12 +21,12 @@ namespace Samiki_Tamaguchi
         /// Samiki's Hapiness
         /// <para> By default it is 100, but can be random or set when creating Samiki</para>
         /// </summary>
-        public int Hapiness { get; set; } = 100;
+        public static int Hapiness { get; set; } = 100;
         /// <summary>
         /// Samiki's Hunger
         /// <para> By default it is 100, but can be random or set when creating Samiki</para>
         /// </summary>
-        public int Hunger { get; set; } = 100;
+        public static int Hunger { get; set; } = 100;
         /// <summary>
         /// Samiki's Health
         /// <para> By default it is 100, but can be random or set when creating Samiki</para>
