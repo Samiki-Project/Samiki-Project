@@ -53,7 +53,7 @@ namespace Samiki_Tamaguchi
         /// <summary>
         /// Starts a Normal journey for Samiki
         /// <para>Creates a Interval for the functions:</para>
-        /// [<see cref="GetAngry"/>] <see cref="GetHungry"/> and <see cref="GetLifeless"/>
+        /// [<see cref="GetAngry"/>] [<see cref="GetHungry"/>] and [<see cref="GetLifeless"/>]
         /// </summary>
         public void StartNormal()
         {
@@ -68,7 +68,7 @@ namespace Samiki_Tamaguchi
         /// <summary>
         /// Starts a Bipolar journey for Samiki 
         /// <para>Condition: <see cref="Samiki.Bipolar"/> = True</para>
-        /// <para>Creates a Interval for the function:</para>
+        /// <para>Creates a TimeOut for the function:</para>
         /// <see cref="BipolarWorld"/>
         /// </summary>
         public void StartBipolar()
