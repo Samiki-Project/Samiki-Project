@@ -268,6 +268,9 @@ namespace Samiki_Tamaguchi
             }
 
             SamikiName = Samiki_chan.Name;
+            SamikiHapiness = Samiki_chan.Hapiness;
+            SamikiHunger = Samiki_chan.Hunger;
+            SamikiHealth = Samiki_chan.Health;
 
             Eat eat = new Eat();
             Play play = new Play();
@@ -352,6 +355,10 @@ namespace Samiki_Tamaguchi
                 }
                 if (bipolar) { Samiki_chan.StartBipolar(); Console.WriteLine($""); }
                 else { Samiki_chan.StartNormal(); Console.WriteLine($""); }
+
+                SamikiHapiness = Samiki_chan.Hapiness;
+                SamikiHunger = Samiki_chan.Hunger;
+                SamikiHealth = Samiki_chan.Health;
             }
         }
     }
