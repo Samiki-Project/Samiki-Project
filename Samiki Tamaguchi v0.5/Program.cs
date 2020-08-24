@@ -16,7 +16,18 @@ namespace Samiki_Tamaguchi
         /// A static field with the name of Samiki to be able to obtain this reference in other files
         /// </summary>
         public static string SamikiName { get; set; }
-
+        /// <summary>
+        /// A static field with the Hunger Level of Samiki to be able to obtain this reference in other files
+        /// </summary>
+        public static int SamikiHunger { get; set; }
+        /// <summary>
+        /// A static field with the Hapiness Level of Samiki to be able to obtain this reference in other files
+        /// </summary>
+        public static int SamikiHapiness { get; set; }
+        /// <summary>
+        /// A static field with the Health Level of Samiki to be able to obtain this reference in other files
+        /// </summary>
+        public static int SamikiHealth { get; set; }
 
 
         static void Main(string[] args)
@@ -262,13 +273,11 @@ namespace Samiki_Tamaguchi
             Play play = new Play();
 
             int i = 0;
-            string  any = "";
+            string any = "";
             while (any != "S")
             {
                 i++;
                 Console.WriteLine($"Round number {i}:");
-                if (bipolar) { Samiki_chan.StartBipolar(); Console.WriteLine($""); }
-                else { Samiki_chan.StartNormal(); Console.WriteLine($""); }
 
                 Console.WriteLine($"");
                 Console.WriteLine("What do you want to do?");
@@ -277,7 +286,7 @@ namespace Samiki_Tamaguchi
                 Console.WriteLine($"C- Nothing");
                 Console.WriteLine($"");
                 Console.WriteLine("To Finish the Application Type 'S'");
-                any = Console.ReadKey(true).ToString();
+                any = Console.ReadLine();
 
                 switch (any)
                 {
@@ -286,8 +295,9 @@ namespace Samiki_Tamaguchi
                         Console.WriteLine($"Does she want to eat something other than normal?");
                         Console.WriteLine($"Y- Yes");
                         Console.WriteLine($"N- No");
-                        char opt = char.Parse(Console.ReadKey(true).ToString());
-                        switch (opt)
+                        ConsoleKeyInfo opt = Console.ReadKey(true);
+
+                        switch (opt.KeyChar)
                         {
                             case 'Y':
                             case 'y':
@@ -308,18 +318,23 @@ namespace Samiki_Tamaguchi
                         Console.WriteLine($"Does she want to play something other than normal?");
                         Console.WriteLine($"Y- Yes");
                         Console.WriteLine($"N- No");
-                        char opt2 = char.Parse(Console.ReadKey(true).ToString());
-                        switch (opt2)
+                        ConsoleKeyInfo opt2 = Console.ReadKey(true);
+
+                        switch (opt2.KeyChar)
                         {
                             case 'Y':
                             case 'y':
                                 Console.WriteLine($"What she Want to play?");
                                 play.ChooseGame(Console.ReadLine());
+                                Console.WriteLine($"");
                                 play.Start();
+                                Console.WriteLine($"");
                                 break;
                             case 'N':
                             case 'n':
+                                Console.WriteLine($"");
                                 play.Start();
+                                Console.WriteLine($"");
                                 break;
                             default:
                                 throw new ArgumentException("Error: You must enter a valid answer!");
@@ -329,9 +344,14 @@ namespace Samiki_Tamaguchi
                     case "c":
                         Console.WriteLine($"Okay, let's go to another Round");
                         break;
+                    case "S":
+                        Console.WriteLine($"Okay, bye then!~");
+                        break;
                     default:
                         throw new ArgumentException("Error: You must enter a valid answer!");
                 }
+                if (bipolar) { Samiki_chan.StartBipolar(); Console.WriteLine($""); }
+                else { Samiki_chan.StartNormal(); Console.WriteLine($""); }
             }
         }
     }
