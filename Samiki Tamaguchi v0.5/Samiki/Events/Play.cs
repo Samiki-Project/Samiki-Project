@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Timers;
-using Samiki_Tamaguchi.Extensions;
 
 namespace Samiki_Tamaguchi.Events
 {
@@ -35,7 +32,7 @@ namespace Samiki_Tamaguchi.Events
         /// <summary>
         /// Attribute to define how long she will be playing in each cycle
         /// </summary>
-        private int intervalPlay = 10000;
+        private int intervalPlay = 1000;
 
 
 
@@ -56,8 +53,11 @@ namespace Samiki_Tamaguchi.Events
             PlayTimer.Elapsed += StartPlaying;
             PlayTimer.Start();
 
-            Console.WriteLine("When you get tired of playing you can go out by pressing any key!");
-            Console.ReadKey(true);
+            Console.WriteLine("When you get tired of playing you can go out by pressing <Enter>!");
+            if (Console.ReadKey().Key == ConsoleKey.Enter)
+            {
+                PlayTimer.Stop();
+            }
 
         }
         /// <summary>
@@ -70,15 +70,15 @@ namespace Samiki_Tamaguchi.Events
             Console.WriteLine($"Playing...");
             var PlayTime = DateTime.Now - lastPlayCycle;
             var subtraction = PlayTime.TotalSeconds;
-            Samiki.Hunger -= int.Parse(Convert.ToSingle(subtraction).ToString());
-            Console.WriteLine($"My hunger now is in: {Samiki.Hunger}");
+            Program.SamikiHunger -= Convert.ToInt32(Convert.ToSingle(subtraction));
+            Console.WriteLine($"My hunger now is in: {Program.SamikiHunger}");
 
             Random random = new Random();
-            int increase = random.Next(30, 40);
-            Samiki.Hapiness += increase;
-            Console.WriteLine($"My hapiness now is in: {Samiki.Hapiness}");
+            int increase = random.Next(20, 30);
+            Program.SamikiHapiness += increase;
+            Console.WriteLine($"My hapiness now is in: {Program.SamikiHapiness}");
 
-            this.timePlaying += int.Parse(Convert.ToSingle(subtraction).ToString());
+            this.timePlaying += Convert.ToInt32(Convert.ToSingle(subtraction));
         }
     }
 }

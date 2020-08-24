@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Timers;
 
 namespace Samiki_Tamaguchi.Events
@@ -20,7 +18,7 @@ namespace Samiki_Tamaguchi.Events
         /// <summary>
         /// Attribute to define how long she will be eating in each cycle
         /// </summary>
-        private int intervalEat = 10000;
+        private int intervalEat = 1000;
 
         /// <summary>
         ///  Method for choosing which Food Samiki will eat
@@ -41,15 +39,18 @@ namespace Samiki_Tamaguchi.Events
             Console.WriteLine($"YAY! Glad you want to feed me {Program.YourName}!!");
             Console.WriteLine($"What are we gonna eat? This time it will be {Food}, right??");
 
-            Timer PlayTimer = new Timer(intervalEat)
+            Timer EatTimer = new Timer(intervalEat)
             {
                 AutoReset = true
             };
-            PlayTimer.Elapsed += StartEating;
-            PlayTimer.Start();
+            EatTimer.Elapsed += StartEating;
+            EatTimer.Start();
 
-            Console.WriteLine("When you get tired of eating you can go out by pressing any key!");
-            Console.ReadKey(true);
+            Console.WriteLine("When you get tired of eating you can go out by pressing <Enter>!");
+            if (Console.ReadKey().Key == ConsoleKey.Enter)
+            {
+                EatTimer.Stop();
+            }
 
         }
         /// <summary>
@@ -60,16 +61,16 @@ namespace Samiki_Tamaguchi.Events
         private void StartEating(object sender, ElapsedEventArgs e)
         {
             Console.WriteLine($"Eating...");
-            var PlayTime = DateTime.Now - lastEatCycle;
-            var subtraction = PlayTime.TotalSeconds;
-            Samiki.Hapiness -= int.Parse(Convert.ToSingle(subtraction).ToString());
-            Console.WriteLine($"My hapiness now is in: {Samiki.Hapiness}");
+            var EatTime = DateTime.Now - lastEatCycle;
+            var subtraction = EatTime.TotalSeconds;
+            Program.SamikiHapiness -= Convert.ToInt32(Convert.ToSingle(subtraction));
+            Console.WriteLine($"My hapiness now is in: {Program.SamikiHapiness}");
 
 
             Random random = new Random();
-            int increase = random.Next(5, 10);
-            Samiki.Hunger += increase;
-            Console.WriteLine($"My hunger now is in: {Samiki.Hunger}");
+            int increase = random.Next(20, 30);
+            Program.SamikiHunger += increase;
+            Console.WriteLine($"My hunger now is in: {Program.SamikiHunger}");
         }
     }
 }
