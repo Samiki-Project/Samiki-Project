@@ -1,7 +1,4 @@
-﻿using Samiki_Tamaguchi.Extensions;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System;
 
 namespace Samiki_Tamaguchi
 {
@@ -12,7 +9,7 @@ namespace Samiki_Tamaguchi
         /// </summary>
         private void GetHungry()
         {
-            Console.WriteLine("\nHunger Before: {0}", Hunger);
+          //  Console.WriteLine("\nHunger Before: {0}", Hunger);
             Random rnd = new Random();
 
             int min = default;
@@ -23,14 +20,15 @@ namespace Samiki_Tamaguchi
             {
                 if (Hunger > 0) min = Hunger / reducerIndex;
                 if (Hunger > 0 && reducerIndex >= min) max = rnd.Next(min, reducerIndex);
+                if (Hunger < 0) { max = 0; }
                 value = rnd.Next(min, max);
             }
             catch (DivideByZeroException) { value = 1; }
 
             Hunger -= value;
 
-            Console.WriteLine("Random Value: {0}", value);
-            Console.WriteLine("Hunger After: {0}", Hunger);
+            //Console.WriteLine("Random Value: {0}", value);
+            //Console.WriteLine("Hunger After: {0}", Hunger);
         }
 
         /// <summary>
@@ -38,7 +36,7 @@ namespace Samiki_Tamaguchi
         /// </summary>
         private void GetAngry()
         {
-            Console.WriteLine("\nHapiness Before: {0}", Hapiness);
+            //Console.WriteLine("\nHapiness Before: {0}", Hapiness);
             Random rnd = new Random();
 
             int min = default;
@@ -49,14 +47,15 @@ namespace Samiki_Tamaguchi
             {
                 if (Hapiness > 0) min = Hapiness / reducerIndex;
                 if (Hapiness > 0 && reducerIndex >= min) max = rnd.Next(min, reducerIndex);
+                if (Hapiness < 0) { max = 0; }
                 value = rnd.Next(min, max);
             }
             catch (DivideByZeroException) { value = 1; }
 
             Hapiness -= value;
 
-            Console.WriteLine("Random Value: {0}", value);
-            Console.WriteLine("Hapiness After: {0}", Hapiness);
+            //Console.WriteLine("Random Value: {0}", value);
+            //Console.WriteLine("Hapiness After: {0}", Hapiness);
         }
 
         /// <summary>
@@ -66,10 +65,10 @@ namespace Samiki_Tamaguchi
         private void GetLifeless()
         {
             Random rnd = new Random();
-            if (Hapiness == 0)
+            if (Hapiness <= 0)
             {
 
-                Console.WriteLine("\nHealth Before: {0}", Health);
+                //Console.WriteLine("\nHealth Before: {0}", Health);
                 int min = default;
                 int max = Health;
                 int reducerIndex = Health / 4;
@@ -79,16 +78,17 @@ namespace Samiki_Tamaguchi
                 {
                     if (Health > 0) min = Health / reducerIndex;
                     if (Health > 0 && reducerIndex >= min) max = rnd.Next(min, reducerIndex);
+                    if (Health < 0) { max = 0; }
                     value = rnd.Next(min, max);
                 }
                 catch (DivideByZeroException) { value = 1; }
 
                 Health -= value;
 
-                Console.WriteLine("Random Value: {0}", value);
-                Console.WriteLine("Health After: {0}", Health);
+                //Console.WriteLine("Random Value: {0}", value);
+                //Console.WriteLine("Health After: {0}", Health);
             }
-            else Console.WriteLine("I'm Still happie >.<");
+            //else Console.WriteLine("I'm Still happie >.<");
         }
 
 
