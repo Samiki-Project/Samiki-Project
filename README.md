@@ -22,8 +22,8 @@ During the first concepts phase I needed to search for similar ideas to have an 
 
 #### Project versions (current and future)
 Development of the project
-- [x] [v0.5](/Samiki Tamaguchi v0.5/README.md) - Initial test (not well done) of how the system can be done/executed. (First Snapshot)
-- [ ] [v0.8](/Samiki Tamaguchi v0.8/README.md) - Complete redesign of the first version to correct the way it was created. (Second Snapshot)
+- [x] [v0.5](https://github.com/KuryKat/Samiki-Project/tree/master/Samiki%20Tamaguchi%20v0.5#version-v05-of-samiki-project) - Initial test (not well done) of how the system can be done/executed. (First Snapshot)
+- [ ] [v0.8](https://github.com/KuryKat/Samiki-Project/tree/master/Samiki%20Tamaguchi%20v0.8#version-v08-of-samiki-project) - Complete redesign of the first version to correct the way it was created. (Second Snapshot)
 - [ ] v1.0 - Initial full version of the project in Console. (First Alpha Version)
 - [ ] v1.2 - Improved version of the initial full version. (Second Alpha Version)
 - [ ] v1.5 - Adaptation of the project to a simple interface. (First Beta)
