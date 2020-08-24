@@ -1,2 +1,25 @@
 # Samiki-Project
-Initial project of a tamagotchi "game", where you have to take care of a cute "pet"
+Description: Project of a Tamagotchi Game, where you have to take care of a cute girl.
+(This project is still being developed)
+I thank @Takasakiii for all the help and contribution in this project (he is my C# mentor)
+I also thank @LuckShiba for all the help he gave me when I was very early in my learning with C#
+
+## Project Phases
+
+#### Initial planning
+During the initial planning phase I intend to:
+- [x] Plan the idea
+- [x] Plan system operation
+- [x] Check Utility
+
+#### First concepts
+During the first concepts phase I needed to search for similar ideas to have an initial basis of how it could be done.
+
+#### Project versions (current and future)
+Development of the project
+- [x] v0.5 - Initial test (not well done) of how the system can be done/executed. (First Snapshot)
+- [ ] v0.8 - Complete redesign of the first version to correct the way it was created. (Second Snapshot)
+- [ ] v1.0 - Initial full version of the project in Console. (First Alpha Version)
+- [ ] v1.2 - Improved version of the initial full version. (Second Alpha Version)
+- [ ] v1.5 - Adaptation of the project to a simple interface. (First Beta)
+- [ ] vx.x - Future...
