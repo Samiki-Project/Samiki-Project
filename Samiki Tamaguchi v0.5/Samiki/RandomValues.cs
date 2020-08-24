@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Samiki_Tamaguchi
 {
@@ -17,9 +15,9 @@ namespace Samiki_Tamaguchi
         {
             Random rnd = new Random();
             int value = rnd.Next(40, 100);
-            Hapiness = value;
+            _Hapiness = value;
             value = rnd.Next(40, 100);
-            Hunger = value;
+            _Hunger = value;
             value = rnd.Next(90, 100);
             Health = value;
         }
