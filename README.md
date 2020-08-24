@@ -1,8 +1,8 @@
 # Samiki-Project
 Description: Project of a Tamagotchi Game, where you have to take care of a cute girl.
 (This project is still being developed)
-I thank @Takasakiii for all the help and contribution in this project (he is my C# mentor)
-I also thank @LuckShiba for all the help he gave me when I was very early in my learning with C#
+I thank (@Takasakiii)[https://github.com/Takasakiii] for all the help and contribution in this project (he is my C# mentor)
+I also thank (@LuckShiba)[https://github.com/LuckShiba] for all the help he gave me when I was very early in my learning with C#
 
 ## Project Phases
 
