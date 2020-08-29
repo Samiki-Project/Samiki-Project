@@ -1,0 +1,35 @@
+{
+  "name": "samiki-bot",
+  "version": "1.0.0",
+  "description": "Bot version of Samiki, our dear Waifu now also on discord!",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "postinstall": "link-module-alias"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KuryKat/Samiki-Project.git"
+  },
+  "author": "KuryKat",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KuryKat/Samiki-Project/issues"
+  },
+  "homepage": "https://github.com/KuryKat/Samiki-Project#readme",
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "discord.js": "^12.3.1",
+    "dotenv": "^8.2.0",
+    "firebase": "^7.19.1",
+    "link-module-alias": "^1.2.0",
+    "module-alias": "^2.2.2",
+    "moment": "^2.27.0"
+  },
+  "_moduleAliases" :{
+    "sk-database": "src/handlers/database.js",
+    "sk-manager": "src/Utils/Manager/index.js",
+    "sk-log": "src/Utils/log.js"
+  }
+}
