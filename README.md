@@ -37,7 +37,7 @@ Development of the project
 
 This Website it's been developed and it'll be hosted on Google firebase for now, it's just a test and maybe it can be the future dashboard and official site of Samiki!
 
-- [Website Path](https://github.com/KuryKat/Samiki-Project/tree/master/Samimi%20Website#Samiki-Project-Website)
+- [Website Path](https://github.com/KuryKat/Samiki-Project/tree/master/Samiki%20Website#samiki-project-website)
 
 # Samiki-Project (Bot Version)
 
