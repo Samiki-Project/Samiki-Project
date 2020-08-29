@@ -50,7 +50,7 @@ This part of the project is separate from the main project, so I decided to put 
 I still have no idea of ​​all the functionality modules that I will put in our dear Samiki, but you can be sure that the game will be included in the bot version too.
 
 ### Profile Picture
-![Samiki Project](https://cdn.discordapp.com/avatars/739014827804196954/417309a73afcf050ac175418d3f89529.png?size=1024 "Samiki Profile Picture")
+<img src="https://cdn.discordapp.com/avatars/739014827804196954/417309a73afcf050ac175418d3f89529.png">
 
 ### Project Phases
 
