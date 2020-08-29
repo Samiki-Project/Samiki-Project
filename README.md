@@ -1,5 +1,7 @@
 # Samiki-Project
-Description: Project of a Tamagotchi Game, where you have to take care of a cute girl.
+#### Description: Project of a Tamagotchi Game, where you have to take care of a cute girl.
+
+###### Main project language = C#
 
 (This project is still being developed)
 
@@ -27,4 +29,38 @@ Development of the project
 - [ ] v1.0 - Initial full version of the project in Console. (First Alpha Version)
 - [ ] v1.2 - Improved version of the initial full version. (Second Alpha Version)
 - [ ] v1.5 - Adaptation of the project to a simple interface. (First Beta)
+- [ ] vx.x - Future...
+
+# Samiki-Website
+#### Samiki's Official Website
+###### Main project language = HTML5
+
+This Website it's been developed and it'll be hosted on Google firebase for now, it's just a test and maybe it can be the future dashboard and official site of Samiki!
+
+- [Website Path](https://github.com/KuryKat/Samiki-Project/tree/master/Samimi%20Website#Samiki-Project-Website)
+
+# Samiki-Project (Bot Version)
+
+#### I decided to turn our dear Samiki waifu into a bot for Discord (I'm a verified bot developer)
+
+###### Main project language = JavaScript
+
+This part of the project is separate from the main project, so I decided to put it in the same repository but with a different Readme, because of that this session has a huge title.
+
+I still have no idea of ​​all the functionality modules that I will put in our dear Samiki, but you can be sure that the game will be included in the bot version too.
+
+### Profile Picture
+![Samiki Project](https://cdn.discordapp.com/avatars/739014827804196954/417309a73afcf050ac175418d3f89529.png?size=1024 "Samiki Profile Picture")
+
+### Project Phases
+
+#### Initial Things
+They are the first and main things to be done
+- [x] Make her "alive"
+- [x] Think on interesting things for her
+ - (Commands and systems)
+
+#### Bot versions
+Development of the project
+- [ ] [v1.0](https://github.com/KuryKat/Samiki-Project/tree/master/Samiki%20Bot%20v1.0#samiki-project-bot-version) - First version of the bot, with the initial modules.
 - [ ] vx.x - Future...
