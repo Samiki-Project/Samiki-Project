@@ -462,3 +462,4 @@ dist
 *.csproj
 *.sln
 Samiki Bot v1.0/src/handlers/database.js
+Samiki Bot v1.0/RichPresence/src/config.json
