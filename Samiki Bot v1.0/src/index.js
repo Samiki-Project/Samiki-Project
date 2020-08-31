@@ -9,7 +9,9 @@ const client = new Client();
 client.commands = new Map()
 const { registerCommands, commandStatus } = require('./handlers/Command/registry');
 
-client.on('ready', () => console.log("I'm Ready! >.<"))
+client.on('ready', () => log("I'm Ready! >.<", "success"))
+client.on('error', (error) => log(`Something wrong: ${error}`, "error"))
+client.on('warn', (warn) => log(`There's the warn: ${warn}`, "warn"))
 
 client.on('message', async message => {
 	const args = message.content.slice(process.env.PREFIX.length).trim().split(/ +/g);
@@ -28,8 +30,8 @@ client.on('message', async message => {
 	await registerCommands(client, '../../commands')
 	setTimeout(() => {
 		for (command of commandStatus) {
-			if(command[1] === "Success") log(`The command '${command[0]}' was successfully loaded`, "success")
-			else if(command[1] === "Failed") log(`The command '${command[0]}' was NOT successfully loaded`, "error")
+			if (command[1] === "Success") log(`The command '${command[0]}' was successfully loaded`, "success")
+			else if (command[1] === "Failed") log(`The command '${command[0]}' was NOT successfully loaded`, "error")
 			else log("There's Something wrong...", "warn")
 		}
 	}, 5000);
