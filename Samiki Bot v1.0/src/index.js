@@ -21,7 +21,7 @@ client.on('message', async message => {
 	if (message.channel.type === "dm") return;
 	if (!message.content.startsWith(process.env.PREFIX)) return;
 
-	if (client.commands.get(command)) client.commands.get(command)(client, message, args);
+	if (client.commands.get(command)) client.commands.get(command)['run'](client, message, args)
 	else message.channel.send("That command does not exist!")
 });
 
