@@ -4,7 +4,7 @@
   "description": "Bot version of Samiki, our dear Waifu now also on discord!",
   "main": "index.js",
   "scripts": {
-    "start": "node src/index.js",
+    "start": "link-module-alias && node src/index.js",
     "dev": "link-module-alias && nodemon src/index.js",
     "postinstall": "link-module-alias"
   },
