@@ -1,7 +1,7 @@
 const { Client, Message } = require("discord.js");
 const log = require('sk-log')("PING")
 const {
-    methods: { incrementDataValue }
+    methods: { incrementDataValue, pushData }
 } = require("sk-manager");
 
 /**
@@ -19,8 +19,11 @@ const run = async (client, message, args) => {
 }
 
 module.exports = {
+    help: {
+        name: "ping",
+        description: "Command that returns the current system and API latency",
+        module: "General"
+    },
     run: run,
-    name: "ping",
-    description: "Command that returns the current system and API latency",
     aliases: []
 }

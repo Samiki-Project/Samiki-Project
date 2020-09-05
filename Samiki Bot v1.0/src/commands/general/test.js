@@ -11,8 +11,11 @@ const run = async (client, message, args) => {
 }
 
 module.exports = {
-    name: "Test",
-    description: "Just a Test",
+    help: {
+        name: "Test",
+        description: "Just a Test",
+        module: "Test"
+    },
     run: run,
     aliases: []
 }
