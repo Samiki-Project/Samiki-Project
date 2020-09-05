@@ -29,11 +29,11 @@ const registerCommands = async (client, dir) => {
                     if (checkCommandModule(cmdName, cmdModule)) {
                         if (checkProperties(cmdName, cmdModule)) {
                             let { aliases } = cmdModule;
-                            client.commands.set(cmdName, cmdModule.run);
+                            client.commands.set(cmdName, { run: cmdModule.run, name: cmdModule.name, help: cmdModule.help });
                             if (aliases.length !== 0)
                                 aliases.forEach(alias => client.commands.set(alias, cmdModule.run));
                             commandStatus.push(
-                                [`${cmdName}`, `Success`, `${cmdModule.description}`]
+                                [`${cmdName}`, `Success`, `${cmdModule.description}`, `${cmdModule.module}`]
                             )
                         }
                     }
@@ -41,9 +41,9 @@ const registerCommands = async (client, dir) => {
                 catch (err) {
                     console.log(err);
                     commandStatus.push(
-                        [`${cmdName}`, `Failed`, '']
+                        [`${cmdName}`, `Failed`, '', '']
                     );
-                }   
+                }
             }
         }
     }
