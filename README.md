@@ -65,3 +65,6 @@ They are the first and main things to be done
 Development of the project
 - [ ] [v1.0](https://github.com/KuryKat/Samiki-Project/tree/master/Samiki%20Bot%20v1.0#samiki-project-bot-version) - First version of the bot, with the initial modules.
 - [ ] vx.x - Future...
+
+
+>     Copyright © 2020 KuryKat
