@@ -1,4 +1,4 @@
-# Samiki-Project
+# Samiki Project - **The Idol Project**
 #### Description: Project of a Tamagotchi Game, where you have to take care of a cute girl.
 
 ###### Main project language = C#
