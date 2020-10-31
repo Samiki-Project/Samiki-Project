@@ -1,0 +1,23 @@
+{
+  "name": "samiki-project",
+  "version": "v0.8",
+  "private": true,
+  "description": "Project of a Tamagotchi Game, where you have to take care of a cute girl.",
+  "author": {
+    "name": "KuryKat",
+    "email": "contactkurykat@gmail.com",
+    "url": "https://kurykat.dev"
+  },
+  "homepage": "https://samikiproject.web.app",
+  "repository": "https://github.com/KuryKat/Samiki-Project",
+  "bugs": "https://github.com/KuryKat/Samiki-Project/issues",
+  "keywords": [
+    "waifu",
+    "Tamagotchi",
+    "tamaguchi",
+    "samiki",
+    "kurykat",
+    "cute",
+    "idol"
+  ]
+}
