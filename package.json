@@ -1,8 +1,8 @@
 {
   "name": "samiki-project",
-  "version": "v0.8",
+  "version": "v0.1.0-pre-alpha",
   "private": true,
-  "description": "Project of a Tamagotchi Game, where you have to take care of a cute girl.",
+  "description": "Idol Project",
   "author": {
     "name": "KuryKat",
     "email": "contactkurykat@gmail.com",
