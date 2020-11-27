@@ -60,19 +60,27 @@ Make sure you have this things:
 
 ----------------------------------------
 
-## Versioning model
+## Versioning model (For Github Tags)
 
 =============================
 
 Model:
-``v{Major}.{Minor}.{Patch}-{State}``
+``{Project}-v{Major}.{Minor}.{Patch}-{State}``
 
 =============================
 
 I used several bases that I researched, but the main one that I used was the semantic versioning, which you can learn [here](https://semver.org/)
 
+### Projects
+
+* Game
+* Bot
+* Website
+* RichPresense
+
 ### States (In order of "growth")
 
+* indev
 * pre-alpha
 * alpha
 * pre-beta
@@ -81,9 +89,11 @@ I used several bases that I researched, but the main one that I used was the sem
 * delta
 * stable
 
-### Version Example
+### Versions Example
 
-> v1.2.3-stable
+* Game-v1.2.3-stable
+* Bot-v1.4.0-pre-beta
+* Website-v2.0.0-indev
 
 ----------------------------------------
 

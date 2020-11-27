@@ -6,7 +6,7 @@ This project was developed under the rules defined in the ["Development Rules"](
 
 ---------------------------------------------
 
-## Samiki Project - Game
+## Samiki Project - [Game](https://github.com/KuryKat/Samiki-Project/tree/Samiki-Game)
 
 Built With: C#
 
@@ -22,18 +22,12 @@ I also thank [@LuckShiba](https://github.com/LuckShiba) for all the help he gave
 
 ### Project versions (current and future) - Game
 
-- [x] *CURRENT* [v0.1.0-pre-alpha](./Samiki-Game) - Initial test (not well done) of how the system can be done/executed. (First Snapshot)
-- [ ] v0.1.0-alpha - Complete redesign of the first version to correct the way it was created. (Second Snapshot)
-- [ ] v1.0.0-pre-alpha - Initial full version of the project in Console. (First Alpha Version)
-- [ ] v1.0.0-alpha - Improved version of the initial full version. (Second Alpha Version)
-- [ ] v1.0.0-beta - Adaptation of the project to a simple interface. (First Beta)
+- [x] *CURRENT* [v0.1.0-pre-alpha](https://github.com/KuryKat/Samiki-Project/releases/tag/Game-v0.1.0-pre-alpha) - Initial test (not well done) of how the system can be done/executed. (First Snapshot)
 - [ ] vx.x.x-[state] - Future...
-
-I may end up releasing other versions with other stages, these are just the possible versions that I intend to release
 
 ---------------------------------------------
 
-## Samiki Project - Website
+## Samiki Project - [Website](https://github.com/KuryKat/Samiki-Project/tree/Samiki-Website)
 
 Built With: React
 
@@ -44,12 +38,12 @@ This Website it's been developed and it'll be hosted on Google firebase for now,
 
 ### Project versions (current and future) - Website
 
-- [x] *CURRENT* [v0.1.0-indev](./)
+- [x] *INDEV* v0.1.0-indev
 - [ ] vx.x.x [state] - Future...
 
 ---------------------------------------------
 
-## Samiki Project - Bot
+## Samiki Project - [Bot](https://github.com/KuryKat/Samiki-Project/tree/Samiki-Bot)
 
 Built With: TypeScript
 
@@ -63,18 +57,18 @@ I still have no idea of ​​all the functionality modules that I will put in o
 
 ### Project versions (current and future) - Bot
 
-- [ ] *CURRENT* [v0.1.0-indev](./) - First version of the bot, with the initial modules.
+- [ ] *INDEV* v0.1.0-indev - First version of the bot, with the initial modules.
 - [ ] vx.x.x [state] - Future...
 
 ---------------------------------------------
 
-## Samiki Project - RichPresense
+## Samiki Project - [RichPresense](https://github.com/KuryKat/Samiki-Project/tree/Samiki-RichPresence)
 
 Built With: TypeScript
 
 ### Project versions (current and future) - RichPresense
 
-- [ ] *CURRENT* [v0.1.0-indev](./) - First version of the RichPresense
+- [ ] *INDEV* v0.1.0-indev - First version of the RichPresense
 - [ ] vx.x.x [state] - Future...
 
 ---------------------------------------------
