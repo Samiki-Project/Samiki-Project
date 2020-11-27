@@ -8,7 +8,7 @@ This project was developed under the rules defined in the ["Development Rules"](
 
 ## Samiki Project - Game
 
-### Built With: C\#
+Built With: C#
 
 Project of a Tamagotchi Game, where you have to take care of a cute girl
 
@@ -22,7 +22,7 @@ I also thank [@LuckShiba](https://github.com/LuckShiba) for all the help he gave
 
 ### Project versions (current and future) - Game
 
-- [x] *CURRENT* [v0.1.0-pre-alpha](./Samiki-Game-0.1.0-alpha/README.md) - Initial test (not well done) of how the system can be done/executed. (First Snapshot)
+- [x] *CURRENT* [v0.1.0-pre-alpha](./Samiki-Game) - Initial test (not well done) of how the system can be done/executed. (First Snapshot)
 - [ ] v0.1.0-alpha - Complete redesign of the first version to correct the way it was created. (Second Snapshot)
 - [ ] v1.0.0-pre-alpha - Initial full version of the project in Console. (First Alpha Version)
 - [ ] v1.0.0-alpha - Improved version of the initial full version. (Second Alpha Version)
@@ -35,36 +35,47 @@ I may end up releasing other versions with other stages, these are just the poss
 
 ## Samiki Project - Website
 
-### Built With: React
+Built With: React
 
 This Website it's been developed and it'll be hosted on Google firebase for now, it's just a test and maybe it can be the future dashboard and official site of Samiki!
 
-### Project versions (current and future) - Website
-
-- [x] *CURRENT* [v0.1.0-indev](./Samiki-Bot/README.md)
-- [ ] vx.x.x [state] - Future...
-
 - [Website Path](./Samiki-Website/README.md)
 - [Website Link](https://samikiproject.web.app/)
+
+### Project versions (current and future) - Website
+
+- [x] *CURRENT* [v0.1.0-indev](./)
+- [ ] vx.x.x [state] - Future...
 
 ---------------------------------------------
 
 ## Samiki Project - Bot
 
-### Built With: TypeScript
+Built With: TypeScript
 
 I decided to turn our dear Samiki waifu into a bot for Discord (I'm a verified bot developer)
 
 I still have no idea of ​​all the functionality modules that I will put in our dear Samiki, but I think about including some type of scoreboard integrated into the website and the game
 
-### Project versions (current and future) - Bot
-
-- [ ] *CURRENT* [v0.1.0-indev](./Samiki-Bot/README.md) - First version of the bot, with the initial modules.
-- [ ] vx.x.x [state] - Future...
-
 ### Profile Picture
 
 ![Samiki Picture](./other/images/profile-picture.png)
+
+### Project versions (current and future) - Bot
+
+- [ ] *CURRENT* [v0.1.0-indev](./) - First version of the bot, with the initial modules.
+- [ ] vx.x.x [state] - Future...
+
+---------------------------------------------
+
+## Samiki Project - RichPresense
+
+Built With: TypeScript
+
+### Project versions (current and future) - RichPresense
+
+- [ ] *CURRENT* [v0.1.0-indev](./) - First version of the RichPresense
+- [ ] vx.x.x [state] - Future...
 
 ---------------------------------------------
 
