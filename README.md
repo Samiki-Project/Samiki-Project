@@ -1,12 +1,10 @@
 # Samiki Project - **The Idol Project**
 
-## This is a project that contains subprojects
-
 This project was developed under the rules defined in the ["Development Rules"](./Development-Rules.md)
 
 ---------------------------------------------
 
-## Samiki Project - [Game](https://github.com/KuryKat/Samiki-Project/tree/Samiki-Game)
+## Samiki Project - [Game](https://github.com/Samiki-Project/Samiki-Game)
 
 Built With: C#
 
@@ -27,7 +25,7 @@ I also thank [@LuckShiba](https://github.com/LuckShiba) for all the help he gave
 
 ---------------------------------------------
 
-## Samiki Project - [Website](https://github.com/KuryKat/Samiki-Project/tree/Samiki-Website)
+## Samiki Project - [Website](https://github.com/Samiki-Project/Samiki-Website)
 
 Built With: React
 
@@ -43,7 +41,7 @@ This Website it's been developed and it'll be hosted on Google firebase for now,
 
 ---------------------------------------------
 
-## Samiki Project - [Bot](https://github.com/KuryKat/Samiki-Project/tree/Samiki-Bot)
+## Samiki Project - [Bot](https://github.com/Samiki-Project/Samiki-Bot)
 
 Built With: TypeScript
 
@@ -62,7 +60,7 @@ I still have no idea of ​​all the functionality modules that I will put in o
 
 ---------------------------------------------
 
-## Samiki Project - [RichPresense](https://github.com/KuryKat/Samiki-Project/tree/Samiki-RichPresence)
+## Samiki Project - [RichPresense](https://github.com/Samiki-Project/Samiki-RichPresence)
 
 Built With: TypeScript
 
